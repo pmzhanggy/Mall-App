@@ -9,42 +9,42 @@
     <!-- 宫格图 -->
     <ul id="myGridTable" class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/newslist">
           <span class="mui-icon mui-icon-home"></span>
           <div class="mui-media-body">服饰</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/newList">
           <span class="mui-icon mui-icon-email">
             <span class="mui-badge">5</span>
           </span>
           <div class="mui-media-body">数码</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/newList">
           <span class="mui-icon mui-icon-chatbubble"></span>
           <div class="mui-media-body">家电</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/newList">
           <span class="mui-icon mui-icon-location"></span>
           <div class="mui-media-body">食品</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/newList">
           <span class="mui-icon mui-icon-search"></span>
           <div class="mui-media-body">旅游</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/newList">
           <span class="mui-icon mui-icon-phone"></span>
           <div class="mui-media-body">办公</div>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -64,8 +64,8 @@ export default {
   methods: {
     getSwipeImg() {
       // 获取轮播图数据的方法
-      this.$http.get("https://www.apiopen.top/meituApi?page=1").then(result => {
-        console.log(result.body);
+      this.$http.get("https://www.apiopen.top/meituApi?page=12").then(result => {
+        // console.log(result.body);
         if (result.body.code === 200) {
           this.swipeList = result.body.data;
           this.swipeList.splice(4);

@@ -22,5 +22,11 @@ module.exports = {
       { test: /\.js$/, use:'babel-loader', exclude: /node_modules/},
       { test: /\.vue$/, use: ['vue-loader']}
     ]
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.js', // 设置vue被导入时包的路径
+    }
   }
 }
+

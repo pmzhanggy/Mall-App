@@ -7,13 +7,19 @@ import ShopCarContainer from './components/tabbar/ShopCarContainer.vue'
 import SearchContainer from './components/tabbar/SearchContainer.vue'
 
 
+// 
+import NewsList from './components/news/NewsList.vue'
+import NewsInfo from './components/news/NewsInfo.vue'
+
 const router = new VueRouter({
   routes: [
-    { path: '/', redirect: '/home'},
+    { path: '/', redirect: '/home' },
     { path: '/home', component: HomeContainer },
     { path: '/member', component: MemberContainer },
     { path: '/shopcar', component: ShopCarContainer },
-    { path: '/search', component: SearchContainer }
+    { path: '/search', component: SearchContainer },
+    { path: '/home/newslist', component: NewsList },
+    { path: '/home/newsinfo/:_id', component: NewsInfo }
   ],
   linkActiveClass: 'mui-active', // 使用MUI提供的active样式类名覆盖路由项的自定义类名
 })
